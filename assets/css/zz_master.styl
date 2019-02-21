@@ -24,14 +24,14 @@ h1,h2,h3,h4,h5,h6,p,span
 	margin-bottom 25px
 h2
 	font-family $shen
-	font-size 62px
+	font-size 50px
 	line-height 78px
 	font-weight 900
 	color $white
 	@media(max-width:992px)
 		font-size 55px
 	@media(max-width:767px)
-		font-size 45px
+		font-size 35px
 		line-height 55px
 h3
 	font-size 50px
@@ -128,6 +128,8 @@ p, .md ul li
 		background-color $purple
 	&.white
 		background-color $white
+	&.rouge
+			background-color #f16e7d
 	.btn__text
 		font-weight 600
 		font-size 18px
@@ -367,7 +369,7 @@ img.angle
 	float none
 	display inline-block
 iframe
-	min-height 500px
+	min-height 100px
 .masonry-filter-holder
 	z-index 4 !important
 	margin-bottom 50px
@@ -536,7 +538,7 @@ section
 body.index
 	header:not(.sticky)
 		img.logo
-			display none
+			display 
 #menu-overlay-toggle
 	display none
 	height 100%
@@ -564,15 +566,19 @@ body.index
 
 header
 	height $headerHeight
+	background-color $blue
 	position absolute
 	z-index 10
 	width 100%
+	padding-top 10px
+	padding-bottom 65px
+	border-bottom: 0.7px solid #757373;
 	.hamburger-toggle
 		display block
 		position relative
 		height 25px
 		width 22px
-		top 17px
+		top 10px
 		right 10px
 		margin-left 22px
 		float right
@@ -598,6 +604,7 @@ header
 		height 80px
 		position fixed
 		background $bluet5
+		padding-bottom 80px
 		a.logo
 			height 70px
 			.logo
@@ -621,6 +628,9 @@ header
 	// div
 	// 	position relative
 	// 	height 100%
+	li
+		font-family BebasNeue
+
 	a.logo
 		height 100px
 		position absolute
@@ -631,23 +641,41 @@ header
 		.logo
 			height 100px
 
-
 	.nav-container
 		height 100%
+
+	button.ticket-button
+		font-family BebasNeue
+		letter-spacing 2px
+		font-weight 100
+		font-size 18px
+		height 35px
+		line-height 1px
+		background-color $white
+		color #696969
+		width 110px
+		border: 0.5px solid #d3d3d3;
+
+	.header-logo
+		height 40px
+		width 50px
 
 	nav
 		#mega-menu
 			position relative
 			//top 20px
 			a, span.dropdown__trigger
+				letter-spacing 2px
 				text-decoration none
 				text-transform uppercase
 				opacity 1
 				color $white
 				transition .2s
-				font-size 16px
+				font-size 18px
 				line-height inherit
-				font-weight 600
+				font-weight 50
+				font-family BebasNeue
+				padding-left 33px
 				&:hover
 					// color $blue
 					transition .2s
@@ -658,7 +686,7 @@ header
 				position relative
 				//top 10px
 				&>li
-					line-height 120px
+					line-height 50px
 					display inline-block
 					&.header-btn
 						margin-right 0px
@@ -718,7 +746,6 @@ ul.footer-social-icons
 				font-size 30px
 
 
-
 // --- queries
 @media (max-width:992px)
 	#menu1
@@ -752,11 +779,13 @@ ul.footer-social-icons
 		margin-top -25px
 	header
 		height 60px !important
+		padding-bottom 0
 		.float-left
 			float left
 		.float-right
 			float right
 		&.sticky
+			padding-bottom 0
 			a.logo
 				height 55px
 				img

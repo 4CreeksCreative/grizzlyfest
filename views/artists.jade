@@ -3,26 +3,25 @@ extends /layout
 block content
 	section.imagebg.parallax.pink.height-50.hero(data-overlay)
 		.background-image-holder
-			img(src="/img/bg/home-header.jpg")
-	section.angle.imagebg.maroon.heavy(data-overlay)
+			img(src="/img/bg/panorama-header.jpg")
+	section.imagebg.maroon.heavy(data-overlay)
 		.background-image-holder
-			img(src="/img/bg/home-img2.jpg")
+			img(src="/img/bg/home-header4.jpg")
 		#artists.container.masonry
 			.row.text-center
 				.col-sm-12
 					h2 THE ARTISTS
 					.separator
 				.col-sm-12.mb--1
-					a.btn.white.angle(href="/schedule")
-						.btn__text.color-maroon See the Schedule
+					
 			if contentful.eventCategories != undefined
 				.row.text-center
 					.masonry-filter-holder.masonry-filters--horizontal
 						.masonry__filters
 							ul
-								li.color-purple.active(data-masonry-filter="*") All Events
-								li.color-purple.active(data-masonry-filter="day1") Day One
-								li.color-purple.active(data-masonry-filter="day2") Day Two
+								li.color-purple.active(data-masonry-filter="*") All Artists
+								li.color-purple.active(data-masonry-filter="day1") Day One Artists
+								li.color-purple.active(data-masonry-filter="day2") Day Two Artists
 			.row.masonry__container.text-center
 				if contentful.artists != undefined
 					for artist in contentful.artists

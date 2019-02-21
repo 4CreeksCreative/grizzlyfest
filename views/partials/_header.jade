@@ -4,10 +4,10 @@ header
 		.visible-sm.visible-xs(style="height:100%;")
 			.container(style="height:100%;")
 				.row(style="height:100%;")
-					.float-left(style="height:100%;")
-						a.logo.logo-mobile(href='/')
-							img.logo(alt='logo', src='/img/logo/logo-blue.png')
-							
+					//- .float-left(style="height:100%;")
+					//- 	a.logo.logo-mobile(href='/')
+					//- 		img.logo(alt='logo', src='/img/logo/logo-blue.png')
+
 					.float-right.col-xs-9.col-sm-10.text-right(style="height:100%;line-height:45px")
 						a.hamburger-toggle.toggle-custom(href='#', data-toggle-class='#menu-overlay-toggle,#menu1,body;custom-toggled-class')
 							.hamburg
@@ -17,32 +17,24 @@ header
 			.closeX.visible-sm.visible-xs(data-toggle-class='#menu-overlay-toggle,#menu1,body;custom-toggled-class')
 				i.fa.fa-times-thin
 			.container
-				a(href='/').float-left.hidden-sm.hidden-xs.logo
-					img.logo(alt='logo', src='/img/logo/logo-blue.png')
+				//- a(href='/').float-left.hidden-sm.hidden-xs.logo
+				//- 	img.logo(alt='logo', src='/img/logo/logo-blue.png')
 				#mega-menu.row
-					.col-sm-12.col-xs-12.text-right.text-right-xs.float-right.float-right-sm
+					.col-sm-12.col-xs-12.text-center.text-right-xs.float-right.float-right-sm
 						.bar__module
 							ul.menu-horizontal.text-left.text-right-xs
-								li.dropdown
-									span.dropdown__trigger Lineup
-									.dropdown__container.megamenu
-										.dropdown__content.dropdown__content--lg
-											ul.menu-vertical
-												li
-													a(href='/artists')
-														| Artists
-												li
-													a(href='/schedule')
-														| Schedule
+
 								li
-									a(href="https://www.festivalticketing.com/cart/74D1661F-E0BF-4260-AD4C-5A1D2FF4FFAC/tickets/1127" target="_blank") Tickets
+									a(href="https://www.festivalticketing.com/cart/4E619283-F903-4A5F-8C59-028BAC65B534/tickets/2068" target="_blank")
+										button.ticket-button Tickets
+
 								li.dropdown
 									span.dropdown__trigger Festival Info
 									.dropdown__container.megamenu
 										.dropdown__content.dropdown__content--lg
 											ul.menu-vertical
 												li
-													a(href='/sponsors') Sponsors
+													//a(href='/sponsors') Sponsors
 												li
 													a(href='/info#festivalhours') Festival Hours
 												li
@@ -51,6 +43,8 @@ header
 													a(href='/info#support') Ticket Support
 												li
 													a(href='/info#dontbring') What NOT to bring
+													li
+														a(href='/info#dobring') What to bring
 												li
 													a(href='/info#safety') Health & Safety
 												li
@@ -61,6 +55,14 @@ header
 													a(href='/info#faqs') FAQs
 												li
 													a(href='/info#contact') Contact
+
+								li
+									a(href='/artists') Artists
+
+								li
+									a.header_logo(href='/')
+										img(src="/img/logo/astronaut_logo.png", alt="astronaut-logo" style="height:55px;width:65px")
+
 								li.dropdown
 									span.dropdown__trigger Get Involved
 									.dropdown__container.megamenu
@@ -79,5 +81,6 @@ header
 													a(href='/gettingthere') Travel
 												li
 													a(href='/hotels') Hotels
-								//-li
-									a(href="#") Shop
+							
+								li
+									a(href='/shop') Shop
