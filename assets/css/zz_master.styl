@@ -3,6 +3,8 @@
 // normalize-css()
 // base()
 
+html
+	overflow-x hidden
 
 body
 	.content,footer
@@ -112,6 +114,8 @@ p, .md ul li
 	color $lightblue
 .color-white
 	color $white
+.color-gray
+	color $gray
 
 .btn
 	border none
@@ -129,11 +133,13 @@ p, .md ul li
 	&.white
 		background-color $white
 	&.rouge
-			background-color #f16e7d
+			background-color $white
 	.btn__text
-		font-weight 600
+		font-weight 100
 		font-size 18px
 		text-transform uppercase
+		font-family BebasNeue
+		letter-spacing 2px
 
 [data-overlay]
 	&::before
@@ -161,6 +167,9 @@ p, .md ul li
 	&:hover
 		color #FF4603
 .fa-facebook
+	&:hover
+		color #3A589E
+.fa-envelope-o
 	&:hover
 		color #3A589E
 .fa-instagram
@@ -227,8 +236,8 @@ imgAnglesEven()
 		clip-path: polygon(10px 0, 100% 0, calc(100% - 10px) 100%, 0 100%);
 
 #first-section
-	padding-bottom 200px
-	padding-top 100px
+	// padding-bottom 200px
+	// padding-top 100px
 	@media(max-width:992px)
 		padding-bottom -100px
 	@media(max-width:767px)
@@ -262,9 +271,11 @@ imgAnglesEven()
 // 	.footer.angle
 // 		margin-top 0
 a.btn.angle
-	clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 100%, 10px 100%);
-	&:hover
-		clip-path: polygon(10px 0, 100% 0, calc(100% - 10px) 100%, 0 100%);
+	// clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 100%, 10px 100%);
+	// &:hover
+	// 	clip-path: polygon(10px 0, 100% 0, calc(100% - 10px) 100%, 0 100%);
+a.btn.angle:hover
+	background-color: $pink
 #map.angle
 	padding 0
 
@@ -317,10 +328,16 @@ img.angle
 	&.angle:nth-child(even)
 		imgAnglesEven()
 
+.social_media_icons_container
+	width 150px
+	margin 0 auto
 
+.social_media_icons
+	display flex
 
-
-
+.social_media_icons li
+	font-size 25px
+	padding-right 20px
 
 
 //--- blog posts
@@ -346,7 +363,12 @@ img.angle
 
 
 
-
+.videoBackground video 
+	position fixed
+	right	0
+	bottom 0
+	min-width 100vw
+	min-height 100%
 
 
 
@@ -383,7 +405,8 @@ iframe
 .map-container
 	min-height 500px
 #big-logo
-	max-width 75%
+	max-width 45%
+	margin-top 13%
 .pos-vertical-center
 	@media(max-width:992px)
 		top auto
@@ -523,6 +546,93 @@ section
 
 
 
+section.ticket-packages-container
+	width 100%
+	height 100%
+	padding 0
+	background-color $white
+	border-top 15px solid $white
+	border-bottom 15px solid $white
+
+	.current-ticket-promotion, .see-all-ticket-packages
+		background: rgb(135,124,180);
+		background: linear-gradient(180deg, rgba(135,124,180,1) 0%, rgba(196,172,204,1) 100%);
+
+		&>h1
+			font-family BebasNeue
+			color $white
+			letter-spacing 5px
+			font-weight	100
+			position relative
+			top	100px
+
+		&>p
+			font-family BebasNeue
+			color $white
+			letter-spacing 3px
+			font-weight	100
+			font-size 23px
+			position relative
+			top	90px
+
+		&>a>button
+			height 35px
+			width 150px
+			background-color $white
+			border 0.5px solid $gray
+			font-family BebasNeue
+			letter-spacing 3px
+			font-size 18px
+			position relative
+			top	110px
+
+
+	.see-all-ticket-packages
+		background: rgb(73,190,227);
+		background: linear-gradient(180deg, rgba(73,190,227,1) 0%, rgba(178,204,227,1) 100%);
+
+	.vimeo-video
+		background: rgb(237,204,225);
+		background: linear-gradient(180deg, rgba(237,204,225,1) 0%, rgba(115,142,192,1) 100%);
+		margin-top 15px
+		border-top 1px solid $black
+		border-bottom 1px solid $black
+
+@media (min-width 0px)
+	.current-ticket-promotion
+		border-bottom 7.5px solid $white
+		height 350px
+
+	.see-all-ticket-packages
+		border-top 7.5px solid $white
+		height 350px
+
+	.vimeo-video
+		height 350px
+
+	.vimeo-video iframe
+		padding 5% 2% 5% 2%
+
+@media (min-width 768px)
+	.current-ticket-promotion
+		border-bottom 0
+		border-right 7.5px solid $white
+		height 400px
+
+	.see-all-ticket-packages
+		border-top 0
+		border-left 7.5px solid $white
+		height 400px
+
+	.vimeo-video
+		height 500px
+
+
+
+
+
+
+
 
 
 // --- header
@@ -655,6 +765,9 @@ header
 		color #696969
 		width 110px
 		border: 0.5px solid #d3d3d3;
+
+	button.ticket-button:hover
+		background-color $pink
 
 	.header-logo
 		height 40px
